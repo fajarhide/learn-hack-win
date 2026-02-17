@@ -10,6 +10,7 @@ import Challenges from "./pages/Challenges";
 import LeaderboardPage from "./pages/LeaderboardPage";
 import CareerSwitcher from "./pages/CareerSwitcher";
 import Certifications from "./pages/Certifications";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/leaderboard" element={<LeaderboardPage />} />
           <Route path="/career-switcher" element={<CareerSwitcher />} />
           <Route path="/certifications" element={<Certifications />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
