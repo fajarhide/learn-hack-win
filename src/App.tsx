@@ -8,6 +8,8 @@ import Modules from "./pages/Modules";
 import ModuleDetail from "./pages/ModuleDetail";
 import Challenges from "./pages/Challenges";
 import LeaderboardPage from "./pages/LeaderboardPage";
+import CareerSwitcher from "./pages/CareerSwitcher";
+import Certifications from "./pages/Certifications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/modules/:id" element={<ModuleDetail />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/leaderboard" element={<LeaderboardPage />} />
+          <Route path="/career-switcher" element={<CareerSwitcher />} />
+          <Route path="/certifications" element={<Certifications />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
