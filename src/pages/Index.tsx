@@ -6,7 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import ModuleCard from "@/components/ModuleCard";
 import { modules } from "@/data/modules";
 import { getProgress, setUsername, getLevelTitle, BADGE_INFO } from "@/lib/gamification";
-import { Shield, Target, Trophy, ArrowRight } from "lucide-react";
+import { Shield, Target, Trophy, Briefcase, Award, ArrowRight } from "lucide-react";
 
 export default function Index() {
   const [progress, setProgress] = useState(getProgress());
@@ -130,11 +130,21 @@ export default function Index() {
 
       {/* Quick links */}
       <section className="container mx-auto px-4 mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link to="/challenges" className="group p-6 rounded-xl border border-border bg-card hover:border-accent/30 transition-all">
             <Target className="h-8 w-8 text-accent mb-3" />
             <h3 className="text-lg font-bold text-foreground group-hover:text-accent transition-colors">Challenge Quiz</h3>
             <p className="text-sm text-muted-foreground mt-1">Uji pemahamanmu dengan quiz interaktif dan dapatkan XP.</p>
+          </Link>
+          <Link to="/career-switcher" className="group p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-all">
+            <Briefcase className="h-8 w-8 text-primary mb-3" />
+            <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">Career Switcher</h3>
+            <p className="text-sm text-muted-foreground mt-1">Panduan switch karier ke cybersecurity dari berbagai latar belakang.</p>
+          </Link>
+          <Link to="/certifications" className="group p-6 rounded-xl border border-border bg-card hover:border-accent/30 transition-all">
+            <Award className="h-8 w-8 text-accent mb-3" />
+            <h3 className="text-lg font-bold text-foreground group-hover:text-accent transition-colors">Sertifikasi</h3>
+            <p className="text-sm text-muted-foreground mt-1">Panduan lengkap sertifikasi dari entry hingga expert level.</p>
           </Link>
           <Link to="/leaderboard" className="group p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-all">
             <Trophy className="h-8 w-8 text-primary mb-3" />
