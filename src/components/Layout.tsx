@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, BookOpen, Target, Trophy, Briefcase, Award, Menu, X } from "lucide-react";
+import { Shield, BookOpen, Target, Trophy, Briefcase, Award, Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { getProgress, getLevelTitle } from "@/lib/gamification";
 
@@ -11,6 +11,7 @@ const navItems = [
   { path: "/career-switcher", label: "Karier", icon: Briefcase },
   { path: "/certifications", label: "Sertifikasi", icon: Award },
   { path: "/leaderboard", label: "Leaderboard", icon: Trophy },
+  { path: "/profile", label: "Profil", icon: User },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
