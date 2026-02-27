@@ -8,6 +8,8 @@ import { challenges } from "@/data/challenges";
 import { completeModule, getProgress, updateLeaderboard } from "@/lib/gamification";
 import { ArrowLeft, CheckCircle, Target, BookOpen, Lightbulb } from "lucide-react";
 
+import { Helmet } from "react-helmet-async";
+
 export default function ModuleDetail() {
   const { id } = useParams();
   const mod = modules.find((m) => m.id === id);
@@ -39,6 +41,10 @@ export default function ModuleDetail() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{mod.title} | Belajar Cybersecurity</title>
+        <meta name="description" content={mod.description} />
+      </Helmet>
       <div className="container mx-auto px-4 py-8">
         {/* Back nav */}
         <Link to="/modules" className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-primary mb-6">

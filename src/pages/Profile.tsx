@@ -43,6 +43,8 @@ import {
 
 const ALL_BADGES = Object.entries(BADGE_INFO);
 
+import { Helmet } from "react-helmet-async";
+
 export default function Profile() {
   const [progress, setProgress] = useState<UserProgress>(getProgress());
 
@@ -123,6 +125,9 @@ export default function Profile() {
   if (!progress.username) {
     return (
       <Layout>
+        <Helmet>
+          <title>Profil Belum Lengkap | Belajar Cybersecurity</title>
+        </Helmet>
         <div className="container mx-auto px-4 py-20 text-center">
           <User className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-foreground mb-2">Belum Ada Profil</h2>
@@ -136,6 +141,10 @@ export default function Profile() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Profil & Progress Belajar | Belajar Cybersecurity</title>
+        <meta name="description" content="Lacak progress belajar cybersecurity Anda. Kumpulkan XP, selesaikan modul, dan tingkatkan peringkat SOC Analyst Anda." />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <motion.div
