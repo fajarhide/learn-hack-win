@@ -789,5 +789,78 @@ export const modules: Module[] = [
         ]
       }
     ]
+  },
+  {
+    id: "modul-07-soc-l1-portfolio",
+    number: 7,
+    title: "SOC Analyst (L1) Portfolio",
+    subtitle: "Membangun Portofolio, Home Lab, dan Simulasi Serangan Siber",
+    description: "Panduan teknis mendetail untuk membangun Home Lab, mensimulasikan serangan nyata, dan cara mendokumentasikannya agar dilirik oleh recruiter.",
+    icon: "🖥️",
+    xpReward: 300,
+    tips: [
+      "Jangan gunakan tipe network Bridged di VM lab agar aman.",
+      "Tulis laporan portofolio secara profesional dan dokumentasikan di GitHub."
+    ],
+    prerequisites: [
+      "Pemahaman Jaringan Dasar",
+      "Sistem Operasi (Windows & Linux)",
+      "Kemampuan setup Virtual Machine (VM)"
+    ],
+    objectives: [
+      "Membangun lab SOC terisolasi dengan Kali Linux dan Windows",
+      "Melakukan ingest log menggunakan Splunk dan Sysmon",
+      "Mendeteksi serangan umum seperti Brute Force dan Persistence",
+      "Menyusun laporan insiden gaya profesional"
+    ],
+    topics: [
+      {
+        title: "Arsitektur & Persiapan Home Lab",
+        points: [
+          "Attacker (Red Team): Kali Linux",
+          "Victim (Endpoint): Windows 10",
+          "Monitoring (Blue Team): Splunk Enterprise (Log Collector & SIEM)",
+          "Gunakan VMware Workstation Player atau VirtualBox dengan mode NAT/Host-Only."
+        ]
+      },
+      {
+        title: "Setup Endpoint dan Log Monitoring",
+        points: [
+          "Windows 10: Matikan Real-time protection Windows Defender.",
+          "Install Sysmon dengan config khusus (contoh: SwiftOnSecurity) untuk deteksi command rahasia.",
+          "Splunk: Add Data -> Local Event Logs -> Microsoft-Windows-Sysmon/Operational."
+        ]
+      },
+      {
+        title: "Proyek Simulasi: Brute Force RDP",
+        points: [
+          "Skenario: Penebakan password Administrator secara paksa dengan Hydra.",
+          "Aksi: hydra -l Administrator -P rockyou.txt rdp://[IP_WINDOWS]",
+          "Deteksi: Splunk EventCode=4625 (Logon Failure) dari SourceNetworkAddress."
+        ]
+      },
+      {
+        title: "Proyek Simulasi: Persistence Backdoor User",
+        points: [
+          "Skenario: Penyerang membuat akun rahasia untuk kembali lagi nanti via cmd (net user).",
+          "Deteksi: Splunk EventCode=4720 (User Created) dan 4732 (Member Added to Group)."
+        ]
+      },
+      {
+        title: "Proyek Simulasi: Obfuscation Malware",
+        points: [
+          "Skenario: Menyembunyikan perintah jahat via encoding Base64 di PowerShell (-e flag).",
+          "Deteksi: Splunk Sysmon EventCode=1 Image='*powershell.exe*' dengan Regex pola Base64."
+        ]
+      },
+      {
+        title: "Laporan Portofolio",
+        points: [
+          "Buat repository GitHub publik untuk memamerkan proyek SOC Anda.",
+          "Format laporan: Executive Summary, Metodologi, Analisis & Deteksi, Remediasi.",
+          "Sertakan Screenshot dashboard Splunk dan terminal saat eksekusi."
+        ]
+      }
+    ]
   }
 ];

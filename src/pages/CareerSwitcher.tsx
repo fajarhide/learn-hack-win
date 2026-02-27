@@ -196,10 +196,10 @@ export default function CareerSwitcher() {
             <motion.div key="list" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <div className="mb-10">
                 <h1 className="text-3xl font-bold text-foreground mb-2">
-                  <span className="text-primary">&gt;</span> Career Switcher Guide
+                  <span className="text-primary">&gt;</span> Panduan Switch Karir Cybersecurity
                 </h1>
                 <p className="text-muted-foreground">
-                  Panduan lengkap untuk berpindah karier ke cybersecurity dari berbagai latar belakang.
+                  Cara beralih profesi menjadi SOC Analyst, Penetration Tester, atau Security Engineer dari latar belakang Non-IT, Software Developer, QA, hingga Data Analyst.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

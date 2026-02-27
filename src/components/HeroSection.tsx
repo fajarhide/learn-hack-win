@@ -34,18 +34,23 @@ export default function HeroSection() {
           >
             <span className="text-foreground">Kuasai </span>
             <span className="text-primary text-glow-strong">Cyber</span>
-            <span className="text-accent">Security</span>
+            <span className="text-accent text-glow-cyan">Security</span>
           </motion.h1>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl"
+            className="mb-10 max-w-2xl font-mono"
           >
-            Platform edukasi interaktif untuk pemula dan career switcher di Indonesia.
-            Belajar dari nol hingga siap kerja — praktis, etis, dan relevan.
-          </motion.p>
+            <p className="text-lg md:text-xl text-primary/80 mb-2">
+              <span className="text-accent mr-2">&gt;</span> 
+              Platform edukasi interaktif untuk Pemula & Career Switcher Cybersecurity.
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground whitespace-nowrap overflow-hidden border-r-2 border-primary animate-typing">
+              Panduan lengkap pindah karir ke Dunia Keamanan Informasi.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
