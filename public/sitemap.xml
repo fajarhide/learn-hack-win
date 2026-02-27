@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://belajarcybersecurity.my.id/</loc>
+    <loc>https://www.belajarcybersecurity.my.id/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://belajarcybersecurity.my.id/modules</loc>
+    <loc>https://www.belajarcybersecurity.my.id/modules</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://belajarcybersecurity.my.id/challenges</loc>
+    <loc>https://www.belajarcybersecurity.my.id/challenges</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://belajarcybersecurity.my.id/leaderboard</loc>
+    <loc>https://www.belajarcybersecurity.my.id/leaderboard</loc>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://belajarcybersecurity.my.id/career-switcher</loc>
+    <loc>https://www.belajarcybersecurity.my.id/career-switcher</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://belajarcybersecurity.my.id/certifications</loc>
+    <loc>https://www.belajarcybersecurity.my.id/certifications</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://belajarcybersecurity.my.id/profile</loc>
+    <loc>https://www.belajarcybersecurity.my.id/profile</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
