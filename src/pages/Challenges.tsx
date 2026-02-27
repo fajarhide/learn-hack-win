@@ -7,6 +7,8 @@ import { modules } from "@/data/modules";
 import { getProgress } from "@/lib/gamification";
 import { Target, Zap } from "lucide-react";
 
+import { Helmet } from "react-helmet-async";
+
 export default function Challenges() {
   const [selectedModule, setSelectedModule] = useState<string | null>(null);
   const progress = getProgress();
@@ -21,6 +23,10 @@ export default function Challenges() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Challenge Kuis Cybersecurity | Latihan Hacking & Keamanan Siber</title>
+        <meta name="description" content="Uji pemahaman cybersecurity Anda dengan kuis tantangan interaktif. Kumpulkan XP dan jadikan diri Anda siap kerja di industri keamanan informasi." />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <h1 className="text-3xl font-bold text-foreground mb-2">

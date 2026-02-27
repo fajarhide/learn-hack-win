@@ -161,6 +161,8 @@ function CertDetail({ cert, onBack }: { cert: Certification; onBack: () => void 
   );
 }
 
+import { Helmet } from "react-helmet-async";
+
 export default function CertificationsPage() {
   const [selected, setSelected] = useState<Certification | null>(null);
   const [filterLevel, setFilterLevel] = useState<string>("all");
@@ -171,6 +173,10 @@ export default function CertificationsPage() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Sertifikasi Cybersecurity Terlengkap | Persiapan Karir Keamanan Informasi</title>
+        <meta name="description" content="Kumpulan panduan sertifikasi cybersecurity terpopuler mulai dari CompTIA Security+, CEH, hingga OSCP. Temukan kurikulum, harga, dan roadmap belajar." />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         <AnimatePresence mode="wait">
           {selected ? (

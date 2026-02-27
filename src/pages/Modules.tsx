@@ -3,11 +3,17 @@ import ModuleCard from "@/components/ModuleCard";
 import { modules } from "@/data/modules";
 import { getProgress } from "@/lib/gamification";
 
+import { Helmet } from "react-helmet-async";
+
 export default function Modules() {
   const progress = getProgress();
 
   return (
     <Layout>
+      <Helmet>
+        <title>Modul Belajar Cybersecurity | Panduan Lengkap dari Nol</title>
+        <meta name="description" content="Kumpulan modul belajar cybersecurity interaktif untuk pemula. Mulai dari dasar IT, jaringan, Linux, hingga keamanan web dan cloud." />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         <div className="mb-10">
           <h1 className="text-3xl font-bold text-foreground mb-2">

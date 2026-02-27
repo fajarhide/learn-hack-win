@@ -183,11 +183,17 @@ function CareerDetail({ path, onBack }: { path: CareerPath; onBack: () => void }
   );
 }
 
+import { Helmet } from "react-helmet-async";
+
 export default function CareerSwitcher() {
   const [selected, setSelected] = useState<CareerPath | null>(null);
 
   return (
     <Layout>
+      <Helmet>
+        <title>Panduan Switch Karir Cybersecurity | Belajar Cybersecurity</title>
+        <meta name="description" content="Cara beralih profesi menjadi SOC Analyst, Penetration Tester, atau Security Engineer dari latar belakang Non-IT, Software Developer, QA, hingga Data Analyst." />
+      </Helmet>
       <div className="container mx-auto px-4 py-12">
         <AnimatePresence mode="wait">
           {selected ? (

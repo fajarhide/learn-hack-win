@@ -8,6 +8,8 @@ import { modules } from "@/data/modules";
 import { getProgress, setUsername, getLevelTitle, BADGE_INFO } from "@/lib/gamification";
 import { Shield, Target, Trophy, Briefcase, Award, ArrowRight } from "lucide-react";
 
+import { Helmet } from "react-helmet-async";
+
 export default function Index() {
   const [progress, setProgress] = useState(getProgress());
   const [nameInput, setNameInput] = useState("");
@@ -29,6 +31,10 @@ export default function Index() {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Belajar Cybersecurity Indonesia - Panduan Pemula & Career Switcher Cybersecurity</title>
+        <meta name="description" content="Platform belajar cybersecurity interaktif untuk pemula dan career switcher di Indonesia. Panduan langkah demi langkah beralih karir dari non-IT, Software Developer, QA, atau Network Admin ke Keamanan Siber." />
+      </Helmet>
       {/* Name modal */}
       {showNameModal && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-background/90 backdrop-blur-sm">

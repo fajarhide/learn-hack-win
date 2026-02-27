@@ -14,12 +14,19 @@ const navItems = [
   { path: "/profile", label: "Profil", icon: User },
 ];
 
+import { Helmet } from "react-helmet-async";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const progress = getProgress();
 
   return (
+    <>
+    <Helmet>
+      <title>Belajar Cybersecurity Indonesia - Panduan Pemula & Career Switcher Cybersecurity</title>
+      <meta name="description" content="Platform edukasi interaktif belajar cybersecurity untuk pemula dan career switcher. Pindah karir menjadi SOC Analyst atau Security Engineer dengan panduan langkah demi langkah." />
+    </Helmet>
     <div className="min-h-screen bg-background terminal-bg">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -124,5 +131,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
     </div>
+    </>
   );
 }
