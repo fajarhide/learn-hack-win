@@ -216,4 +216,36 @@ export const challenges: Challenge[] = [
     options: ["Pindahkan server ke kiri", "Integrasikan security lebih awal di development", "Deploy lebih cepat", "Gunakan left-hand rule"],
     correctAnswer: 1, explanation: "Shift-Left berarti mengintegrasikan praktik keamanan sedini mungkin dalam siklus development, bukan di akhir.", xpReward: 20, difficulty: "hard"
   },
+
+  // Modul 7 - SOC Analyst (L1) Portfolio
+  {
+    id: "c7-1", moduleId: "modul-07-soc-l1-portfolio",
+    question: "Apa Event ID di Windows (Splunk) yang menandakan Logon Failure atau indikasi serangan Brute Force?",
+    options: ["Event ID 4624", "Event ID 4625", "Event ID 4720", "Event ID 4732"],
+    correctAnswer: 1, explanation: "Event ID 4625 mencatat kegagalan log masuk (Logon Failure), yang sering digunakan analis SOC untuk mendeteksi Brute Force RDP.", xpReward: 15, difficulty: "medium"
+  },
+  {
+    id: "c7-2", moduleId: "modul-07-soc-l1-portfolio",
+    question: "Dalam membangun Home Lab, mengapa disarankan mengatur jaringan VM ke mode NAT atau Host-Only alih-alih Bridged?",
+    options: ["Agar performa Kali Linux lebih cepat", "Supaya VM mendapat IP publik gratis", "Untuk mencegah serangan bocor ke jaringan WiFi rumah/asli", "Karena Splunk hanya bekerja di mode NAT"],
+    correctAnswer: 2, explanation: "NAT atau Host-Only mengisolasi jaringan VM dari jaringan fisik (LAN), menjaga keamanan jaringan rumah jika terjadi kebocoran malware atau serangan liar.", xpReward: 10, difficulty: "easy"
+  },
+  {
+    id: "c7-3", moduleId: "modul-07-soc-l1-portfolio",
+    question: "Tools tambahan buatan Sysinternals yang sangat penting di-install pada Windows untuk mendeteksi eksekusi perintah jahat yang tersembunyi (misal: Base64 obfuscation) adalah?",
+    options: ["Windows Defender", "Sysmon (System Monitor)", "Wireshark", "Hydra"],
+    correctAnswer: 1, explanation: "Sysmon mencatat aktivitas sistem yang sangat detail ke Windows Event Log, termasuk Event ID 1 (Process Creation) yang dapat melihat isi command-line yang diobfuscate.", xpReward: 20, difficulty: "hard"
+  },
+  {
+    id: "c7-4", moduleId: "modul-07-soc-l1-portfolio",
+    question: "Jika seorang attacker membuat backdoor dengan perintah 'net user hacker Jahat123! /add', Event ID log apa yang akan terekam oleh SIEM?",
+    options: ["Event ID 4625", "Event ID 4720", "Event ID 1102", "Event ID 4688"],
+    correctAnswer: 1, explanation: "Event ID 4720 merepresentasikan 'A user account was created', yang merupakan indikator kuat adanya Persistence dari penyerang.", xpReward: 15, difficulty: "medium"
+  },
+  {
+    id: "c7-5", moduleId: "modul-07-soc-l1-portfolio",
+    question: "Di fase apa dalam Laporan Insiden (Incident Report) seorang analis menyertakan langkah 'Mengubah port default RDP dan menerapkan kebijakan Account Lockout'?",
+    options: ["Executive Summary", "Metodologi Serangan", "Analisis & Deteksi", "Remediasi & Rekomendasi"],
+    correctAnswer: 3, explanation: "Langkah-langkah perbaikan, isolasi, dan penguatan (hardening) sistem selalu didokumentasikan di bagian Remediasi & Rekomendasi.", xpReward: 10, difficulty: "easy"
+  }
 ];
